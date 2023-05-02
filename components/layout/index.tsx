@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: any) => {
   return (
     <>
       <header className='bg-stone-100'>
@@ -10,7 +10,13 @@ const Layout = ({ children }) => {
               <Link href='/home'>Home</Link>
             </li>
             <li>
-              <Link href='/posts'>Posts</Link>
+              <Link href='/blogs'>Blogs</Link>
+            </li>
+            <li>
+              <Link href='/about'>About Me</Link>
+            </li>
+            <li>
+              <Link href='/contact'>Contact Us</Link>
             </li>
           </ul>
         </nav>

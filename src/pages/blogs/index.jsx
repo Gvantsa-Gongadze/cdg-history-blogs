@@ -1,8 +1,8 @@
 import { client } from '../../../lib/contentful/client'
 
-const Posts = ({ posts }) => {
-  console.log('posts: ', posts)
-  return <div>list</div>
+const Blogs = ({ blogs }) => {
+  console.log('posts: ', blogs)
+  return <div>list: </div>
   // return <div>list: {posts?.map((post, i) => post)}</div>
 }
 
@@ -12,10 +12,10 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      posts: response.items,
+      blogs: response.items,
       revalidate: 60
     }
   }
 }
 
-export default Posts
+export default Blogs
