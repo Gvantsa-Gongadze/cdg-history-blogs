@@ -13,25 +13,28 @@ const PostCard = ({ post }: any) => {
   // console.log('author: ', author)
   // console.log('date: ', date)
 
-  // return
   return (
-    <div>
+    <div className='shadow-md overflow-hidden m-5 flex-wrap'>
       <Link href={`/blogs/${slug}`} aria-label={title}>
-        <ContentfulImage
-          alt={`Cover Inage for ${title}`}
-          src={coverImage.fields.file.url}
-          width={coverImage.fields.file.details.image.width}
-          height={coverImage.fields.file.details.image.height}
-        />
+        <div className='mb-2'>
+          <ContentfulImage
+            alt={`Cover Inage for ${title}`}
+            src={coverImage.fields.file.url}
+            width={coverImage.fields.file.details.image.width}
+            height={coverImage.fields.file.details.image.height}
+          />
+        </div>
 
         <div>
           <h3>{title}</h3>
         </div>
         <div>
+          <span>Published: </span>
           <DateComponent dateString={date} />
         </div>
-        <div>
-          <Avatar name={author.fields.name} picture={author.fields.picture} />
+        <div className='flex '>
+          Author: {author.fields.name}
+          {/* <Avatar name={author.fields.name} picture={author.fields.picture} /> */}
         </div>
       </Link>
     </div>

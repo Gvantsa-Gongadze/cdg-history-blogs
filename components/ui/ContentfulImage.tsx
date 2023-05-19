@@ -4,6 +4,6 @@ const contentfulLoader = ({ src, width, quality }: any): any => {
   return `${src}?w=${width}&q=${quality || 75}`
 }
 const ContentfulImage = (props: any) => {
-  return <Image loader={contentfulLoader} {...props} alt={123} />
+  return <Image loader={contentfulLoader} {...props} alt={props.alt} />
 }
 export default ContentfulImage

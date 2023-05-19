@@ -2,16 +2,16 @@ import ContentfulImage from './ContentfulImage'
 
 const Avatar = ({ name, picture }: any) => {
   return (
-    <div>
+    <div className='flex justify-center items-baseline'>
+      <div className='mr-2 ml-2'>{name}</div>
       <ContentfulImage
         src={picture.fields.file.url}
-        layout='f111'
+        layout='fill'
         className='rounded-full n-9'
         alt={name}
-        width={30}
-        height={30}
+        width={25}
+        height={25}
       />
-      <div>{name}</div>
     </div>
   )
 }
