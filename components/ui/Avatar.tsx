@@ -6,7 +6,7 @@ const Avatar = ({ name, picture }: any) => {
       <div className='mr-2 ml-2'>{name}</div>
       <ContentfulImage
         src={picture.fields.file.url}
-        layout='fill'
+        // layout='fill'
         className='rounded-full n-9'
         alt={name}
         width={25}
